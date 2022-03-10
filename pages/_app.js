@@ -1,7 +1,18 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import CompleteBar from "../component/completebar";
+import "bootstrap/dist/css/bootstrap.css";
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  useEffect(() => {
+    import("bootstrap/dist/js/bootstrap");
+  }, []);
+  return (
+    <>
+      <CompleteBar></CompleteBar>
+      <Component {...pageProps} />)
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;
